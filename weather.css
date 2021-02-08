@@ -116,6 +116,7 @@ div.text {
   }
 
   .content {
+    padding: 0;
     width: 100%;
     background-color: rgb(15, 15, 95);
     justify-content: center;
