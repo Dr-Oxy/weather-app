@@ -120,7 +120,7 @@ div.text {
     width: 100%;
     background-color: rgb(15, 15, 95);
     justify-content: center;
-
+    align-items: center;
     background-image: linear-gradient(
       to right bottom,
       rgba(255, 255, 255, 0.924),
