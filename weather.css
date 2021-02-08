@@ -1,0 +1,101 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+* {
+  box-sizing: inheriit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(253, 253, 253);
+  font-family: sans-serif;
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.info {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(89, 183, 238, 0.5)
+  );
+
+  padding: 40px 0;
+  color: rgba(0, 30, 95, 0.822);
+  text-align: center;
+}
+
+.info h1 {
+  background-image: linear-gradient(
+    to right,
+    rgba(25, 222, 222, 0.8),
+    rgba(33, 50, 206, 0.4)
+  );
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.info p {
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  margin: 20px auto;
+  width: 75%;
+}
+
+.content {
+  padding: 40px;
+  text-align: center;
+}
+
+.content .searchBox {
+  width: 70%;
+  background-color: rgb(235, 235, 235);
+  border: none;
+  padding: 20px;
+  font-size: 1.3rem;
+  border-radius: 20px 0;
+  margin-bottom: 20px;
+}
+
+.notification {
+  background-color: rgb(196, 14, 14);
+  color: rgb(224, 216, 216);
+  padding: 20px;
+  width: 50%;
+  margin: auto;
+  font-size: 1.4rem;
+
+  display: none;
+}
+
+.location {
+  font-size: 2rem;
+  text-shadow: 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.temperature-value {
+  margin: 30px 0;
+  display: inline-block;
+  background-color: rgba(221, 221, 221, 0.74);
+  padding: 30px;
+  font-size: 3rem;
+  border-radius: 10px;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.description {
+  font-size: 1.4rem;
+  color: #333;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Application</title>
+    <link rel="stylesheet" href="weather.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="info">
+        <h1>Weather Application</h1>
+        <h3>With Vanilla JavaScript</h3>
+
+        <p>
+          This was my very first attempt at using apis. It was not all smooth
+          sails but I got a hang of it in the end.
+        </p>
+
+        <div class="images"></div>
+      </div>
+
+      <div class="content">
+        <div class="search">
+          <input
+            type="text"
+            class="searchBox"
+            placeholder="Search Locations..."
+          />
+        </div>
+
+        <div class="weather-container">
+          <div class="notification"></div>
+
+          <div class="weather-icon">
+            <img src="./icons/unknown.png" alt="unknown weather" />
+          </div>
+
+          <p class="location"></p>
+
+          <p class="date">Monday 8th February, 2021</p>
+
+          <p class="temperature-value">°C</p>
+
+          <p class="description"></p>
+        </div>
+      </div>
+    </main>
+
+    <script src="w-app.js"></script>
+  </body>
+</html>
