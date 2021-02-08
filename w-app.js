@@ -17,7 +17,6 @@ const weather = {
 };
 
 //Checks browser support for geolocation
-
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(setPosition, showError);
 } else {
@@ -48,19 +47,23 @@ function getWeather(lat, lon) {
       return response.json();
     })
     .then(function (data) {
-      weather.temperature.value = Math.floor(data.main.temp - 273);
-
-      weather.description = data.weather[0].description;
-
-      weather.city = data.name;
-
-      weather.country = data.sys.country;
-
-      weather.iconId = data.weather[0].icon;
+      saveData(data);
     })
     .then(() => {
       displayWeather();
     });
+}
+
+function saveData(data) {
+  weather.temperature.value = Math.floor(data.main.temp - 273);
+
+  weather.description = data.weather[0].description;
+
+  weather.city = data.name;
+
+  weather.country = data.sys.country;
+
+  weather.iconId = data.weather[0].icon;
 }
 
 displayWeather = () => {
@@ -70,10 +73,12 @@ displayWeather = () => {
   weatherIcon.innerHTML = `<img src=icons/${weather.iconId}.png />`;
 };
 
+//Getting weather of searched location
 const searchLocation = document.querySelector(".searchBox");
 searchLocation.addEventListener("keypress", setQuery);
 
 function setQuery(evt) {
+  //if the enter key(13) is pressed
   if (evt.keyCode == 13) {
     getResults(searchLocation.value);
   }
@@ -85,17 +90,12 @@ function getResults(query) {
       return weather.json();
     })
     .then(function (data) {
-      weather.temperature.value = Math.floor(data.main.temp - 273);
-
-      weather.description = data.weather[0].description;
-
-      weather.city = data.name;
-
-      weather.country = data.sys.country;
-
-      weather.iconId = data.weather[0].icon;
+      saveData(data);
     })
     .then(() => {
       displayWeather();
+    })
+    .then(() => {
+      searchLocation.value = "";
     });
 }

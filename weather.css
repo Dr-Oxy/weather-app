@@ -60,6 +60,7 @@ main {
   padding: 40px;
   text-align: center;
 }
+
 div.text {
   display: none;
 }
@@ -75,7 +76,7 @@ div.text {
 }
 
 .notification {
-  background-color: rgb(196, 14, 14);
+  background-color: rgba(196, 14, 14, 0.698);
   color: rgb(224, 216, 216);
   padding: 20px;
   width: 50%;
