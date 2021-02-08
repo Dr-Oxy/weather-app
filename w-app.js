@@ -71,7 +71,35 @@ displayWeather = () => {
   desc.innerHTML = `${weather.description}`;
   locat.innerHTML = `${weather.city}, ${weather.country}`;
   weatherIcon.innerHTML = `<img src=icons/${weather.iconId}.png />`;
+
+  let now = new Date();
+  date.innerText = dateBuild(now);
 };
+
+function dateBuild(d) {
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "April",
+    "May",
+    "June",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+
+  let day = days[d.getDay()];
+  let date = d.getDate();
+  let month = months[d.getMonth()];
+  let year = d.getFullYear();
+
+  return `${day} ${date} ${month} ${year}`;
+}
 
 //Getting weather of searched location
 const searchLocation = document.querySelector(".searchBox");
