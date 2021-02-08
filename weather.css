@@ -60,6 +60,7 @@ main {
   align-items: center;
   padding: 40px;
   text-align: center;
+  background-color: rgb(45, 45, 83);
   color: #fff;
 }
 
